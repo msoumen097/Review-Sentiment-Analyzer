@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Sentiment Explorer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0d2d2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-style: italic;
+            color: #006400;
+        }
+
+        form {
+            margin-top: 50px;
+        }
+
+        label {
+            font-size: 25px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        label {
+            text-align: left;
+            font-size: 25px;
+            /* Increase font size */
+            color: #333;
+            margin-bottom: 20px;
+            /* Add some bottom margin for spacing */
+        }
+
+        textarea {
+            width: 500px;
+            margin: 0 auto;
+            /* Center the textarea horizontally */
+            padding: 50px;
+            border-radius: 10px;
+            border: 2px solid #007bff;
+            /* Change border color to blue */
+            background-color: #f0f8ff;
+            /* Light blue background */
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            /* Use a funky font */
+            font-size: 16px;
+            /* Set font size */
+            color: #333;
+            /* Set text color */
+            resize: none;
+            transition: border-color 0.3s;
+            /* Smooth border color transition */
+        }
+
+        textarea::placeholder {
+            text-align: center;
+            /* Center placeholder text horizontally */
+            vertical-align: middle;
+            /* Center placeholder text vertically */
+            line-height: inherit;
+            /* Inherit line height */
+        }
+
+
+
+        input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+            /* Set margin to auto horizontally */
+            width: fit-content;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            color: #6aa3e0;
+            background-color: #273782;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Review Sentiment Analyzer</h1>
+        <form method="POST" action="/predict">
+            <label for="text">Enter your Review:</label>
+            <textarea id="text" name="input_text" rows="5"
+                placeholder="Input your product impressions here and let's explore their emotional landscape!"></textarea>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+
+</html>
